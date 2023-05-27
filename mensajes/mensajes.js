@@ -11,7 +11,9 @@ function Hola(message) {
     message.channel.send('Saco Wea Culiao');
   } else if (message.content.toLowerCase() === 'gracias') {
     message.channel.send('De nada waxito ');
-  } 
+  } else if(message.content ='11'){
+        message.delete();
+  }
 }
 
 function Link(message) {
