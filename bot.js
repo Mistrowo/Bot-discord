@@ -1,50 +1,20 @@
-//requerimientos
-const {Client,EmbedBuilder}= require('discord.js')
-const config=require('./config.json')
-//cliente
+// bot.js
 
-const cliente = new Discord.Client({
-    intents: 3276799
-     
-  });
+const { Client } = require('discord.js');
+const config = require('./config.json');
+const { Hola } = require('./mensajes/mensajes');
 
+const cliente = new Client({
+  intents: 3276799
+});
 
-//contenido
-cliente.on('ready',async(client)=>{
-    console.log('Iniciando waxito')
-})
+cliente.on('ready', () => {
+  console.log('Iniciando waxito');
+});
 
-//comunicacion
-cliente.login(config.token)
+cliente.login(config.token);
 
-//Mensajes
-cliente.on("messageCreate", async mensaje =>{
-    if (mensaje.content="hola" || "Hola") {
-        mensaje.channel.send("wena klo")
-    }
-})
-cliente.on("messageCreate", async mensaje =>{
-    if(mensaje.content = "lembed"){
-        const embed= new EmbedBuilder()
-        .setTitle("Titulo")
-        .setDescription("Alex")
-        .setAuthor({
-            name: "poto"
-        })
-        //.setThumbnail
-        //setImage
-        .setFooter({
-            text:"nooooo"
-        })
-        .setTimestamp()
-        .setFields({
-            name:"Nombre",
-            value:"Antonio"
-        },{
-            name:"Nombre",inline:true,
-            value: "Alex", inline:false
-        })
-        .setColor("ffff")
-    }
-})
-
+cliente.on('messageCreate', async (message) => {
+  Hola(message);
+  
+});
