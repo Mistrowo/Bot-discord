@@ -19,6 +19,8 @@
   "homepage": "https://github.com/Mistrowo/Bot-discord#readme",
   "dependencies": {
     "@discordjs/voice": "^0.16.0",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
     "discord.js": "^13.4.0",
     "fs": "^0.0.1-security",
     "youtube-api-v3-search": "^1.2.1",
