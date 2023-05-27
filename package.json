@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/Mistrowo/Bot-discord#readme",
   "dependencies": {
-    "discord.js": "^13.4.0"
+    "discord.js": "^13.4.0",
+    "fs": "^0.0.1-security",
+    "youtube-api-v3-search": "^1.2.1"
   }
-  
- 
 }

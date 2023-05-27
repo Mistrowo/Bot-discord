@@ -2,7 +2,7 @@
 
 const { Client } = require('discord.js');
 const config = require('./config.json');
-const { Hola, Link } = require('./mensajes/mensajes');
+const { Hola, Link,Musica } = require('./mensajes/mensajes');
 
 const cliente = new Client({
   intents: 3276799
@@ -17,6 +17,7 @@ cliente.login(config.token);
 cliente.on('messageCreate', async (message) => {
   Hola(message);
   Link(message);
+  Musica(message)
  
   
 });
